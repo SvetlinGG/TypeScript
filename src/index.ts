@@ -17,4 +17,14 @@ let user: [number, string] = [1, 'Mosh'];
 user.push(1)
 console.log(user);
 
+// const small = 1;
+// const medium = 2;
+// const large = 3;
+// pascal case
+
+enum Size {Small = 10, Medium, Large};
+let mySize: Size = Size.Medium;
+console.log(mySize);
+
+
 
