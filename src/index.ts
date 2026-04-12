@@ -37,8 +37,8 @@ calculateTax(10_000, 2022);
 
 let employee: {
     id: number,
-    name: string, 
-} = { id: 1, name: ''};
+    name?: string, 
+} = { id: 1};
 employee.name = "Svetlin";
 console.log(employee);
 
