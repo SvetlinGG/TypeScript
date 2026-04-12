@@ -34,12 +34,16 @@ function calculateTax(income: number, taxYear: number): number{
 }
 calculateTax(10_000, 2022);
 
+// work with Objects
+// Don't repeat yourself - DRY
 
-let employee: {
+type Employee = {
     readonly  id: number,
     name?: string,
-    retire: (date: Date) => void 
-} = { 
+    retire: (date: Date) => void
+}
+
+let employee: Employee = { 
     id: 1,
     name: 'Svetlin',
     retire: (date: Date) => {
