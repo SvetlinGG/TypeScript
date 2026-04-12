@@ -52,10 +52,20 @@ let employee: Employee = {
     }
 };
 
-
-
-
 console.log(employee);
+
+// Union Types
+
+function kgToLbs(weight: number | string){
+    if (typeof weight === 'number')
+        return weight * 2.2
+    else
+        return parseInt(weight) * 2.2;
+
+}
+
+kgToLbs(100);
+kgToLbs('10');
 
 
 
