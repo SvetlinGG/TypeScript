@@ -36,10 +36,21 @@ calculateTax(10_000, 2022);
 
 
 let employee: {
-    id: number,
-    name?: string, 
-} = { id: 1};
-employee.name = "Svetlin";
+    readonly  id: number,
+    name?: string,
+    retire: (date: Date) => void 
+} = { 
+    id: 1,
+    name: 'Svetlin',
+    retire: (date: Date) => {
+        console.log(date);
+        
+    }
+};
+
+
+
+
 console.log(employee);
 
 
