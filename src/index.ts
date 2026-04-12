@@ -17,6 +17,7 @@ let user: [number, string] = [1, 'Mosh'];
 user.push(1)
 console.log(user);
 
+
 // const small = 1;
 // const medium = 2;
 // const large = 3;
@@ -31,7 +32,16 @@ function calculateTax(income: number, taxYear: number): number{
         return income * 1.2;
     return income * 1.3;
 }
-calculateTax(10_000, 2022)
+calculateTax(10_000, 2022);
+
+
+let employee: {
+    id: number,
+    name: string, 
+    age: number
+} = { id: 1};
+
+
 
 
 
