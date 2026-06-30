@@ -1,2 +1,2 @@
-# TypeScript
+# TypeScript SoftUni
 education course
