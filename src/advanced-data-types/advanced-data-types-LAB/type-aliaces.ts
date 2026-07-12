@@ -41,3 +41,12 @@ const person1: Person = {
     city: 'Sofia'
 }
 console.log(person1);
+
+type AddressKeys = keyof Address
+
+function printCity(arg: User | Person){
+    if ('city' in arg) {
+        console.log(arg.city);
+    }
+}
+printCity(person1)
