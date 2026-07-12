@@ -30,3 +30,14 @@ const address2: Address = {
     country: 'Bulgaria',
     city: 'Burgas'
 }
+
+type Person = User & Address;
+
+const person1: Person = {
+    firstName: 'Svetlin',
+    lastName: 'Garabedyan',
+    email: 'svetlinb@gmail.com',
+    country: 'Bulgaria',
+    city: 'Sofia'
+}
+console.log(person1);
