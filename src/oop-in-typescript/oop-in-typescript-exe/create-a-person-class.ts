@@ -17,4 +17,4 @@ class Person {
 }
 
 let person = new Person('John', 'Doe', 30);
-person.int
+person.introduce();

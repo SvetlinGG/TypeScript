@@ -24,5 +24,4 @@ class Car extends Vehicle {
     }
 }
 
-const car = new Car('Toyota', 'Corolla');
-console.log(car.drive());
+const car = new Car('Toyota', 'C
