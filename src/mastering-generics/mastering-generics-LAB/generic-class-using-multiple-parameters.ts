@@ -9,13 +9,4 @@ class UserInput<F, S> {
     }
 
     showBoth(){
-        return `First ${this.first}, second: ${this.second}`;
-    }
-
-
-}
-
-let sample = new UserInput('Ten', 10);
-let test = new UserInput(1, true);
-console.log(sample.showBoth());
-console.log(test.showBoth());
+        return `First ${this.first}, second: ${this.second}
