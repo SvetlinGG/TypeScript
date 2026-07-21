@@ -5,4 +5,4 @@ const takeLast = <T>(array: T[]): T | undefined => {
 
 const simple = takeLast(['Hello', 'World', 'TypeScript'])
 const secondSimple = takeLast([1, 2, 3, 4]);
-console.log(simple, se
+console.log(simple, secondSimple);
