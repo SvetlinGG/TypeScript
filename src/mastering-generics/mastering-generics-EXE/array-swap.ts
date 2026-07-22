@@ -1,3 +1,3 @@
-function arraySwap<T, S>(a: T[], aindex: number, b: S[], bindex: number){
-    
-}
+//export{}
+function swap<T>(a: T[], aIndex: number, b: T[], bIndex: number){
+   
