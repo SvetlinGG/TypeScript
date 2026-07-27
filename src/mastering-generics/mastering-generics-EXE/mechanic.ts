@@ -26,4 +26,4 @@ mechanic.technicalInspection(maybeCar2);    //ok
 // mechanic.technicalInspection(notACar);      //TS Error
 // mechanic.technicalInspection(maybeCar);     //TS Error
 // mechanic.technicalInspection(maybeCar3);    //TS Error
-// mechanic.technicalInspection(maybeCar5);    //TS Error
+// mechanic.technicalInspection(maybeCar5);    //TS
