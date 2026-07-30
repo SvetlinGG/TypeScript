@@ -6,6 +6,10 @@ function isString(val: unknown): val is string{
     return (val as string).charAt != undefined;
 }
 let myVal: unknown = createRandomVariable();
-console.log(myVal.length); // error
-console.log(myVal * 2); // error
+// console.log(myVal.length); // error
+// console.log(myVal * 2); // error
+
+if(isString(myVal)) console.log(myVal.length);
+if(typeof myVal === 'string') console.log(myVal.length);
+
 
