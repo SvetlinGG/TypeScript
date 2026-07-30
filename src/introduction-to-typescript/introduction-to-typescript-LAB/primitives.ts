@@ -20,8 +20,10 @@ let bigCount: bigint = 1237834647493837n;
 let npthingHere: null = null;
 
 // symbol
-
 let uniqueKey: symbol = Symbol("unique")
+
+// undefined
+let undefineValue: undefined = undefined;
 
 
 
