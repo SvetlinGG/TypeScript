@@ -5,3 +5,4 @@ function formatPerson(information: [string, number]){
 formatPerson(['Ivan', 20]);
 formatPerson(['Petya', 30]);
 //formatPerson(['Ivan', 30, 'Ivanov']);
+
