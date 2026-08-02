@@ -9,7 +9,15 @@ enum DaysOfTheWeek {
 }
 
 function getDayNumber(day: number){
-    console.log(DaysOfTheWeek[day] || 'error');
+
+    if ( day in DaysOfTheWeek){
+        console.log(DaysOfTheWeek[day]);
+        
+    }else{
+        console.log('error');
+        
+    }
+    //console.log(DaysOfTheWeek[day] || 'error');
     
 }
 getDayNumber(5);
