@@ -1,3 +1,4 @@
+export
 let names = {
   fName: "John",
   lName: "Doe",
@@ -16,6 +17,23 @@ let location = {
     return `${this.street} ${this.number}, ${this.city} ${this.postalCode}`;
   },
 };
+
+type Names = typeof names;
+type Location = typeof location;
+
+type Person = Names & Location;
+
+function createCombinedFunction(
+    names: Names,
+    location: Location,
+): (person: Person) => void{
+    return function (person: Person){
+        console.log(
+            `Hello, ${person.getPersonInfo()} from ${person.getAddressInfo()}`
+        );
+        
+    };
+}
 
 
 
