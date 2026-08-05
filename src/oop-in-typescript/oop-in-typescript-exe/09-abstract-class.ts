@@ -40,29 +40,6 @@ const rectangle = new Rectangle("blue", 4, 6);
 console.log(rectangle.getArea());
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // abstract class Shape {
 //     color: string;
 
