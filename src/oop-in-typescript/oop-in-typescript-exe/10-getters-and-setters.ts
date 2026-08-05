@@ -18,8 +18,12 @@ class User {
         }
         this._username = value 
     }
-
 }
+
+const user = new User('Martin');
+//const user = new User("jo");
+user.username = 'johnDoe';
+console.log(user.username);
 
 
 
