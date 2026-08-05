@@ -1,23 +1,68 @@
 export{}
+
 class User {
-    private _username!: string;
+    private _username: string;
 
     constructor(_username: string){
-        this.username = _username;
+        this._username = _username;
     }
+    
 
     get username(){
         return this._username;
     }
 
     set username(value: string){
-        if ( value.length < 3){
-            throw new Error('Error: Username must be at least 3 characters long')
+        if (value.length < 3){
+            throw new Error('Error: Username must be at least 3 characters long.')
         }
-        this._username = value;
+        this._username = value 
     }
+
 }
-//const user = new User('Martin');
-const user = new User("jo");
-user.username = 'johnDoe';
-console.log(user.username);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// class User {
+//     private _username!: string;
+
+//     constructor(_username: string){
+//         this.username = _username;
+//     }
+
+//     get username(){
+//         return this._username;
+//     }
+
+//     set username(value: string){
+//         if ( value.length < 3){
+//             throw new Error('Error: Username must be at least 3 characters long')
+//         }
+//         this._username = value;
+//     }
+// }
+// //const user = new User('Martin');
+// const user = new User("jo");
+// user.username = 'johnDoe';
+// console.log(user.username);
