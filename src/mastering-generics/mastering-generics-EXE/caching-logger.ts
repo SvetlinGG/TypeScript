@@ -16,40 +16,40 @@ interface CachingLogger<T extends LoggingLevel, V extends LoggingFormat> {
     getFormat(): V
 }
 
-class Logger<
-    T extends LoggingLevel, 
-    V extends LoggingFormat> 
-    implements CachingLogger<T, V> {
-        cachedLogs: Map<T, string[]> = new Map();
-        private loggingFormat: V
+class Logger<T extends LoggingLevel, V extends LoggingFormat> implements CachingLogger<T, V>{
+
+    cachedLogs: Map<T, string[]> = new Map();
+    private loggingFormat: V
 
     constructor(loggingFormat: V){
         this.loggingFormat = loggingFormat;
     }
 
-    getFormat(): V{
-        return this.loggingFormat;
+    getFormat(){
+        return this.loggingFormat
     }
 
-    log(logLevel: T, message: string): void{
+    log(logLevel: T, message: string): void {
         const date = new Date().toISOString();
         const logMessage = this.loggingFormat
-        .replace('%level', logLevel)
-        .replace('%date', date)
-        .replace('%text', message);
+            .replace('%level', logLevel)
+            .replace('%date', date)
+            .replace('%text', message);
 
-        if (!this.cachedLogs.has(logLevel)) {
+        if(!this.cachedLogs.has(logLevel)){
             this.cachedLogs.set(logLevel, []);
         }
 
         let cacheLevelLogs = this.cachedLogs.get(logLevel)!;
         cacheLevelLogs.push(logMessage);
 
+
         console.log(logMessage);
         
     }
-
 }
+
+
 let logger = new Logger<LoggingLevel, LoggingFormat>(LoggingFormat.Standard);
 logger.log(LoggingLevel.Info, "This is an info message.");
 logger.log(LoggingLevel.Info, "Another message.");
