@@ -1,11 +1,11 @@
-type Choose<T, K extends keyof T> = {
+type Choose<T, K extends keyof T> ={
     [Key in K]: T[Key]
-};
+}
 
 type test = {
     name: string,
     age: number,
-    test: () => string;
+    test:() => string;
 }
 
 type extracted = Choose<test, 'name' | 'age'>
@@ -20,5 +20,6 @@ type anotherType = {
         age: number
     }
 }
-type nestedUserAndTime = 'user' | 'time';
+
+type nestedUserAndTime = 'user' | 'time'
 type extracted2 = Choose<anotherType, nestedUserAndTime>
