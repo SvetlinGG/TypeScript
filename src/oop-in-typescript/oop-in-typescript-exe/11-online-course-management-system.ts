@@ -40,34 +40,6 @@ console.log(jsCourse.getDescription());
 console.log(uiCourse.getDescription());
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // abstract class Course {
     
 
