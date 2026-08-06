@@ -1,4 +1,14 @@
+interface BaseTechnicalInspection{
+    engine: {horsepower: number};
+    tires: { model: string, airPressure: number};
+    body: { material: string}
+}
 
+class Mechanic<T extends BaseTechnicalInspection>{
+    technicalInspection(_car: T): boolean{
+        return true
+    }
+}
 
 let mechanic = new Mechanic();
 let someCar = { engine: { horsepower: 350, type: 'diesel' }, tires: { model: 'BRIT', airPressure: 33 }, body: { material: 'aluminum' } };
