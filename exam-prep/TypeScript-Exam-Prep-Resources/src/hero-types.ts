@@ -1,4 +1,4 @@
-import { WithId } from "./models";
+import { Hero, HeroRole, Weapon, WithId } from "./models";
 
 export class GuildStash<T extends WithId>{
 
@@ -15,7 +15,27 @@ export class GuildStash<T extends WithId>{
     }
 
     public getAll(): T[]{
-        return this.records;
+        return this.records.slice();
     }
 
+}
+
+export abstract class BaseHero implements Hero {
+    id: number;
+    name: string;
+    level: number;
+    role: HeroRole;
+
+    public weapons: Weapon[] = [];
+    abstract calculateStamina(): number;
+    abstract attack(): number;
+
+    constructor(id: number, name: string, level: number, role: HeroRole){
+        this.id = id;
+        this.name = name;
+        this.level = level;
+        this.role = role;
+    }
+
+    
 }

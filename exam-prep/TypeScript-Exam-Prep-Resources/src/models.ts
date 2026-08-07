@@ -8,13 +8,13 @@ export interface WithId {
     id: number
 }
 
-export interface HeroBase extends WithId {
-    name: string,
-    level: number,
-    role: HeroRole,
+export interface Hero extends WithId {
+    name: string;
+    level: number;
+    role: HeroRole;
 }
 
 export interface Weapon extends WithId {
-    name: string,
-    damage: number,
+    name: string;
+    damage: number;
 }
