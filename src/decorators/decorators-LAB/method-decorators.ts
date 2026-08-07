@@ -5,7 +5,7 @@ class Num {
         return this._number; 
     }
 }
-function add10(target: Object, name: string, descriptor: PropertyDescriptor) {
+function add10(_target: Object, _key: string, descriptor: PropertyDescriptor) {
     let originalMethod = descriptor.value;
 
     descriptor.value = function (...arg: any[]){

@@ -1,5 +1,6 @@
 export
-@addTitle class Person { constructor(public name: string){} }
+@addTitle 
+class Person { constructor(public name: string){} }
 
 function addTitle<T extends new(...args: any[]) => {}>(constructor: T){
     return class extends constructor {
