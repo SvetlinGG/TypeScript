@@ -28,7 +28,7 @@ export class GameManager {
         }
 
         hero.weapons.push(weapon);
-        return `Weapon ${weapon.name}" equipped to hero "${hero.name}".`;
+        return `Weapon "${weapon.name}" equipped to hero "${hero.name}".`;
     }
 
     public listAllHeroes(): string[] {

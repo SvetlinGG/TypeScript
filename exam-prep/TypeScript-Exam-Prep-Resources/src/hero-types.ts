@@ -1,3 +1,4 @@
+import { CriticalStrike } from "./decorators";
 import { Hero, HeroRole, Weapon, WithId } from "./models";
 
 export class GuildStash<T extends WithId>{
@@ -59,7 +60,7 @@ export class Warrior extends BaseHero {
     calculateStamina(): number {
         return (this.level * 10) + (this.strength * 5);
     }
-
+    @CriticalStrike
     attack(): number {
         return this.strength * 2;
     }
