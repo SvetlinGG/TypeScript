@@ -1,4 +1,4 @@
-import { BaseHero, GuildStash } from "./hero-types";
+import { Archer, BaseHero, GuildStash, Mage, Warrior } from "./hero-types";
 import { Weapon } from "./models";
 
 export class GameManager {
@@ -30,4 +30,37 @@ export class GameManager {
         hero.weapons.push(weapon);
         return `Weapon ${weapon.name}" equipped to hero "${hero.name}".`;
     }
+
+    public listAllHeroes(): string[] {
+    const result: string[] = [
+        "--- Guild Roster ---"
+    ];
+
+    for (const hero of this.heroes) {
+        let specificDetail = "";
+
+        if (hero instanceof Warrior) {
+            specificDetail =
+                `Strength: ${hero.strength}`;
+        } else if (hero instanceof Mage) {
+            specificDetail =
+                `Mana: ${hero.mana}`;
+        } else if (hero instanceof Archer) {
+            specificDetail =
+                `Agility: ${hero.agility}`;
+        }
+
+        const stamina = hero.calculateStamina();
+
+        result.push(
+            `[${hero.role}] ${hero.name} ` +
+            `(Level: ${hero.level}, ${specificDetail}) ` +
+            `- Stamina: ${stamina}`
+        );
+    }
+
+    result.push("--------------------");
+
+    return result;
+}
 }
