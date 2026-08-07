@@ -78,3 +78,24 @@ export class Mage extends BaseHero {
         return this.mana * 2;
     }
 }
+
+export class Archer extends BaseHero {
+
+    constructor(
+        id: number,
+        name: string,
+        level: number,
+        public agility: number
+    ){
+        super(id, name, level, HeroRole.Archer);
+        this.agility = agility;
+    }
+
+    calculateStamina(): number{
+        return (this.level * 8) + (this.agility * 4)
+    }
+
+    attack(): number{
+        return this.agility * 2;
+    }
+}
