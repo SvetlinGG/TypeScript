@@ -9,9 +9,15 @@ export class GuildStash<T extends WithId>{
     }
 
     public take(id: number): T | undefined{
-        if (this.records.find(x => x.id === id) !== undefined){
-            return this.records.find(x => x.id === id);
+        const index = this.records.findIndex(p => p.id === id);
+
+        if ( index === -1){
+            return undefined;
+
         }
+        const removedItems = this.records.splice(index, 1);
+
+        return removedItems[0];
     }
 
     public getAll(): T[]{
