@@ -1,0 +1,20 @@
+export enum HeroRole {
+    Warriors = 'WARRIORS',
+    Mage = 'MAGE',
+    Archer = 'ARCHER',
+}
+
+export interface WithId {
+    id: number
+}
+
+export interface HeroBase extends WithId {
+    name: string,
+    level: number,
+    role: HeroRole,
+}
+
+export interface Weapon extends WithId {
+    name: string,
+    damage: number,
+}
