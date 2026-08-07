@@ -1,5 +1,5 @@
 export enum HeroRole {
-    Warriors = 'WARRIORS',
+    Warrior = 'WARRIORS',
     Mage = 'MAGE',
     Archer = 'ARCHER',
 }

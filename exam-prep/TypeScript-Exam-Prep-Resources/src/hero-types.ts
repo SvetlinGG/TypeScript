@@ -36,6 +36,45 @@ export abstract class BaseHero implements Hero {
         this.level = level;
         this.role = role;
     }
+}
 
-    
+export class Warrior extends BaseHero {
+
+    constructor(
+        id: number,
+        name: string,
+        level: number,
+        public strength: number
+    ){
+        super(id, name, level, HeroRole.Warrior);
+        this.strength = strength;
+    }
+
+    calculateStamina(): number {
+        return (this.level * 10) + (this.strength * 5);
+    }
+
+    attack(): number {
+        return this.strength * 2;
+    }
+}
+export class Mage extends BaseHero {
+
+    constructor(
+        id: number,
+        name: string,
+        level: number,
+        public mana: number
+    ){
+        super(id, name, level, HeroRole.Mage);
+        this.mana = mana;
+    }
+
+    calculateStamina(): number{
+        return (this.level * 5) + (this.mana *2);
+    }
+
+    attack(): number {
+        return this.mana * 2;
+    }
 }
