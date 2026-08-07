@@ -1,6 +1,6 @@
 export function CriticalStrike(
-    target: object,
-    propertyKey: string,
+    _target: object,
+    _propertyKey: string,
     descriptor: PropertyDescriptor
 ): void {
     if (typeof descriptor.value !== "function") {
