@@ -42,13 +42,13 @@ async function main() {
     // const ice = new IceTower(3, "Frost Sentinel", 6, 20);
 
     // Cannon range: (5 * 3) + (30 * 2) = 15 + 60 = 75
-    // console.log(`Cannon Range: ${cannon.calculateRange()}`);
+     console.log(`Cannon Range: ${cannon.calculateRange()}`);
 
     // // Magic range: (8 * 5) + (40 * 1) = 40 + 40 = 80
-    // console.log(`Magic Range: ${magic.calculateRange()}`);
+     console.log(`Magic Range: ${magic.calculateRange()}`);
 
     // // Ice range: (6 * 4) + (20 * 3) = 24 + 60 = 84
-    // console.log(`Ice Range: ${ice.calculateRange()}`);
+     console.log(`Ice Range: ${ice.calculateRange()}`);
 }
 
 main();
