@@ -5,12 +5,12 @@ import { Upgraded } from './decorators';
 
 async function main() {
 
-    // Example 1: Place Towers
-    // const manager = new MapManager();
-    // const cannon = new CannonTower(1, "Iron Bastion", 5, 30);
-    // const magic = new MagicTower(2, "Arcane Spire", 8, 40);
-    // console.log(manager.placeTower(cannon));
-    // console.log(manager.placeTower(magic));
+    //Example 1: Place Towers
+    const manager = new MapManager();
+    const cannon = new CannonTower(1, "Iron Bastion", 5, 30);
+    const magic = new MagicTower(2, "Arcane Spire", 8, 40);
+    console.log(manager.placeTower(cannon));
+    console.log(manager.placeTower(magic));
 
     // Example 2: Wave Queue and Target Assignment
     // const manager = new MapManager();
@@ -36,19 +36,19 @@ async function main() {
     // console.log(`Cannon Attack (Upgraded): ${cannon.attack()}`);
 
     // Example 4: Range Calculation
-    const manager = new MapManager();
-    const cannon = new CannonTower(1, "Iron Bastion", 5, 30);
-    const magic = new MagicTower(2, "Arcane Spire", 8, 40);
-    const ice = new IceTower(3, "Frost Sentinel", 6, 20);
+    // const manager = new MapManager();
+    // const cannon = new CannonTower(1, "Iron Bastion", 5, 30);
+    // const magic = new MagicTower(2, "Arcane Spire", 8, 40);
+    // const ice = new IceTower(3, "Frost Sentinel", 6, 20);
 
     // Cannon range: (5 * 3) + (30 * 2) = 15 + 60 = 75
-    console.log(`Cannon Range: ${cannon.calculateRange()}`);
+    // console.log(`Cannon Range: ${cannon.calculateRange()}`);
 
-    // Magic range: (8 * 5) + (40 * 1) = 40 + 40 = 80
-    console.log(`Magic Range: ${magic.calculateRange()}`);
+    // // Magic range: (8 * 5) + (40 * 1) = 40 + 40 = 80
+    // console.log(`Magic Range: ${magic.calculateRange()}`);
 
-    // Ice range: (6 * 4) + (20 * 3) = 24 + 60 = 84
-    console.log(`Ice Range: ${ice.calculateRange()}`);
+    // // Ice range: (6 * 4) + (20 * 3) = 24 + 60 = 84
+    // console.log(`Ice Range: ${ice.calculateRange()}`);
 }
 
 main();

@@ -26,6 +26,11 @@ export class BuildQueue<T extends WithId> {
 
 export abstract class BaseTower implements Tower {
 
+    id: number;
+    name: string;
+    level: number;
+    type: TowerType
+
     public targets: Enemy[] = []
 
     constructor(
@@ -33,10 +38,15 @@ export abstract class BaseTower implements Tower {
         name: string,
         level: number,
         type: TowerType
-    ){}
+    ){
+        this.id = id;
+        this.name = name;
+        this.level = level;
+        this.type = type;
+    }
 
     abstract calculateRange(): number;
-    @Upgraded
+    
     abstract attack(): number;
 
 }
@@ -54,7 +64,7 @@ export class CannonTower extends BaseTower {
     calculateRange(): number{
         return this.level * 3 + this.power * 2;
     }
-
+    @Upgraded
     attack(): number{
         return this.power * 3;
     }
@@ -74,7 +84,7 @@ export class MagicTower extends BaseTower {
     public calculateRange(): number{
         return this.level * 5 + this.spellPower * 1;
     }
-
+    @Upgraded
     public attack(): number{
         return this.spellPower * 4;
     }
@@ -94,7 +104,7 @@ export class IceTower extends BaseTower {
     public calculateRange(): number {
         return this.level * 4 + this.freeze * 3;
     }
-
+    @Upgraded
     public attack(): number {
         return this.freeze * 2;
     }

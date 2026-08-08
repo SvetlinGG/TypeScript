@@ -1,6 +1,6 @@
 export function Upgraded(
-    target: object,
-    propertyKey: string,
+    _target: object,
+    _propertyKey: string,
     descriptor: PropertyDescriptor
 ): void {
     const originalMethod = descriptor.value;
