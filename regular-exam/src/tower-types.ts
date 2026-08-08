@@ -1,3 +1,4 @@
+import { Upgraded } from "./decorators";
 import { Enemy, Tower, TowerType, WithId } from "./models";
 
 
@@ -34,9 +35,9 @@ export abstract class BaseTower implements Tower {
         type: TowerType
     ){}
 
-    public abstract calculateRange(): number;
-
-    public abstract attack(): number;
+    abstract calculateRange(): number;
+    @Upgraded
+    abstract attack(): number;
 
 }
 
