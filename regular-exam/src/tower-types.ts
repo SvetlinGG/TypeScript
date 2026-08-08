@@ -84,7 +84,7 @@ export class MagicTower extends BaseTower {
     public calculateRange(): number{
         return this.level * 5 + this.spellPower * 1;
     }
-    @Upgraded
+    
     public attack(): number{
         return this.spellPower * 4;
     }
@@ -104,7 +104,7 @@ export class IceTower extends BaseTower {
     public calculateRange(): number {
         return this.level * 4 + this.freeze * 3;
     }
-    @Upgraded
+    
     public attack(): number {
         return this.freeze * 2;
     }
