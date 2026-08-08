@@ -1,4 +1,4 @@
-import { WithId } from "./models";
+import { Enemy, Tower, TowerType, WithId } from "./models";
 
 
 export class BuildQueue<T extends WithId> {
@@ -23,3 +23,78 @@ export class BuildQueue<T extends WithId> {
     }
 }
 
+export abstract class BaseTower implements Tower {
+
+    public targets: Enemy[] = []
+
+    constructor(
+        id: number,
+        name: string,
+        level: number,
+        type: TowerType
+    ){}
+
+    public abstract calculateRange(): number;
+
+    public abstract attack(): number;
+
+}
+
+export class CannonTower extends BaseTower {
+    constructor(
+        id: number,
+        name: string,
+        level: number,
+        public power: number
+    ){
+        super(id, name, level, TowerType.Cannon);
+    }
+
+    calculateRange(): number{
+        return this.level * 3 + this.power * 2;
+    }
+
+    attack(): number{
+        return this.power * 3;
+    }
+}
+
+export class MagicTower extends BaseTower {
+
+    constructor(
+        id: number,
+        name: string,
+        level: number,
+        public spellPower: number
+    ){
+        super(id, name, level, TowerType.Magic);
+    }
+
+    public calculateRange(): number{
+        return this.level * 5 + this.spellPower * 1;
+    }
+
+    public attack(): number{
+        return this.spellPower * 4;
+    }
+}
+
+export class IceTower extends BaseTower {
+
+    constructor(
+        id: number,
+        name: string,
+        level: number,
+        public freeze: number
+    ){
+        super(id, name, level, TowerType.Ice);
+    }
+
+    public calculateRange(): number {
+        return this.level * 4 + this.freeze * 3;
+    }
+
+    public attack(): number {
+        return this.freeze * 2;
+    }
+}
